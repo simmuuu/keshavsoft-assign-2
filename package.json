@@ -16,8 +16,5 @@
     "chokidar": "^4.0.3",
     "nunjucks": "^3.2.4",
     "vite": "^7.1.6"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.0.1"
   }
 }

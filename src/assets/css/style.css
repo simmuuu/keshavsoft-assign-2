@@ -1,13 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+:root {
+  --almost-black: #0a0a0a;
+  --dark-gray: #1a1a1a;
+  --medium-gray: #2a2a2a;
+  --light-gray: #3a3a3a;
+  --accent-gray: #4a4a4a;
+  --text-primary: #f5f5f5;
+  --text-secondary: #d0d0d0;
+  --text-muted: #a0a0a0;
+  --accent-color: #6c63ff;
+  --accent-hover: #5a52d5;
+}
+
+* {
+  font-family: 'Geist Mono', monospace !important;
+}
+
 html, body {
   height: 100%;
+  background-color: var(--almost-black);
+  color: var(--text-primary);
 }
 
 body {
-  min-height: 90;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  line-height: 1.6;
 }
 
 main {
   flex: 1;
+}
+
+/* Custom Bootstrap overrides for dark theme */
+.bg-primary {
+  background-color: var(--accent-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-light {
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+  color: var(--almost-black);
+  font-weight: 500;
+}
+
+.btn-light:hover {
+  background-color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  color: var(--almost-black);
+}
+
+.card {
+  background-color: var(--dark-gray);
+  border: 1px solid var(--medium-gray);
+  color: var(--text-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.15);
+}
+
+.navbar-dark {
+  background-color: var(--dark-gray) !important;
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--text-primary) !important;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color) !important;
+}
+
+.form-control {
+  background-color: var(--medium-gray);
+  border: 1px solid var(--light-gray);
+  color: var(--text-primary);
+}
+
+.form-control:focus {
+  background-color: var(--medium-gray);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+  color: var(--text-primary);
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+footer {
+  background-color: var(--dark-gray) !important;
+  border-top: 1px solid var(--medium-gray);
+}
+
+/* Tech stack icons section */
+.tech-stack {
+  background-color: var(--dark-gray);
+  border-top: 1px solid var(--medium-gray);
+  border-bottom: 1px solid var(--medium-gray);
+  overflow: hidden;
+}
+
+.tech-icon {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  color: var(--text-muted);
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--medium-gray);
+}
+
+.tech-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.tech-icon.js { color: #f7df1e; background-color: rgba(247, 223, 30, 0.1); }
+.tech-icon.java { color: #f89820; background-color: rgba(248, 152, 32, 0.1); }
+.tech-icon.golang { color: #00add8; background-color: rgba(0, 173, 216, 0.1); }
+.tech-icon.nodejs { color: #339933; background-color: rgba(51, 153, 51, 0.1); }
+.tech-icon.aws { color: #ff9900; background-color: rgba(255, 153, 0, 0.1); }
+.tech-icon.digitalocean { color: #0080ff; background-color: rgba(0, 128, 255, 0.1); }
+.tech-icon.cloudflare { color: #f48120; background-color: rgba(244, 129, 32, 0.1); }
+.tech-icon.python { color: #3776ab; background-color: rgba(55, 118, 171, 0.1); }
+
+.tech-icon.js:hover,
+.tech-icon.java:hover,
+.tech-icon.golang:hover,
+.tech-icon.nodejs:hover,
+.tech-icon.aws:hover,
+.tech-icon.digitalocean:hover,
+.tech-icon.cloudflare:hover,
+.tech-icon.python:hover {
+  filter: brightness(1.2);
+  background-color: var(--accent-color);
+}
+
+/* Moving icons animation */
+.moving-icons {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--dark-gray);
+  border-top: 1px solid var(--medium-gray);
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.icons-track {
+  display: inline-block;
+  animation: moveLeft 20s linear infinite;
+}
+
+.icon-item {
+  display: inline-block;
+  margin: 0 3rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon-item span {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.icon-item:hover span {
+  transform: scale(1.2);
+}
+
+.icon-item p {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
