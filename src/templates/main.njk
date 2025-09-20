@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+
+{% set currentPage = "home" %}
+{% set title = "Sathvik Reddy" %}
+
+{% block content %}
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <p class="lead">CS Student interested in Web Dev, Backend.</p>
+        <a href="about.html" class="btn btn-light btn-lg mt-3">Learn More</a>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Building modern, responsive websites using HTML, CSS, and Bootstrap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Backend Development</h5>
+                        <p class="card-text">Designing clean and efficent backends for web applications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Learning & Growth</h5>
+                        <p class="card-text">Constantly exploring new technologies and improving my skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

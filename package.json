@@ -1,0 +1,23 @@
+{
+  "name": "assignment-2",
+  "version": "1.0.0",
+  "description": "Portfolio site built with Vite and Nunjucks",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.16.0",
+  "devDependencies": {
+    "chokidar": "^4.0.3",
+    "nunjucks": "^3.2.4",
+    "vite": "^7.1.6"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.1"
+  }
+}
